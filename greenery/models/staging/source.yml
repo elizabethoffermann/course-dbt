@@ -21,6 +21,7 @@ sources:
           Contains demographic information about each superhero
 
       - name: users
+        loaded_at_field: created_at
         description: >
           Contains user demographic information
 
@@ -29,6 +30,7 @@ sources:
           Contains user address information
 
       - name: events
+        loaded_at_field: created_at
         description: >
           Contains event information
 
@@ -37,6 +39,7 @@ sources:
           Contains order to user specific information
 
       - name: orders
+        loaded_at_field: created_at
         description: >
           Contains order information
 

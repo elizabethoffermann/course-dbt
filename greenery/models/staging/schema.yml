@@ -4,17 +4,28 @@ models:
   - name: stg_users
     columns:
       - name: user_id
+        tests:
+          - not_null
+          - unique
       - name: first_name
+        tests:
+          - not_null
       - name: last_name
+        tests:
+          - not_null
       - name: email
       - name: phone_number
       - name: created_at
+        tests:
+          - not_null
       - name: updated_at 
       - name: address_id
 
   - name: stg_addresses
     columns:
       - name: address_id
+        tests:
+          - not_null
       - name: address
       - name: zipcode
       - name: state
@@ -23,7 +34,11 @@ models:
   - name: stg_events
     columns:
       - name: event_id
+        tests:
+          - not_null
       - name: session_id
+        tests:
+          - not_null
       - name: user_id
       - name: page_url
       - name: created_at
@@ -34,13 +49,21 @@ models:
   - name: stg_order_items
     columns:
       - name: order_id
+        tests:
+          - not_null   
       - name: product_id
+        tests:
+          - not_null
       - name: quantity
   
   - name: stg_orders
     columns:
       - name: order_id
+        tests:
+          - not_null
       - name: user_id
+        tests:
+          - not_null
       - name: promo_id
       - name: address_id
       - name: created_at
@@ -56,6 +79,8 @@ models:
   - name: stg_products
     columns:
     - name: product_id
+      tests:
+        - not_null
     - name: name
     - name: price
     - name: inventory
@@ -63,6 +88,8 @@ models:
   - name: stg_promos
     columns:
     - name: promo_id
+      tests:
+        - not_null
     - name: discount
     - name: status
 
