@@ -1,0 +1,39 @@
+version: 2
+
+models:
+  - name: fact_page_views
+    columns:
+      - name: user_id
+        tests:
+          - not_null
+          - unique
+      - name: first_name
+        tests:
+          - not_null
+      - name: last_name
+        tests:
+          - not_null
+      - name: email
+      - name: phone_number
+      - name: address_id
+        tests:
+          - not_null
+      - name: address
+      - name: zipcode
+      - name: state
+      - name: country
+      - name: event_id
+        tests:
+          - not_null
+      - name: session_id
+        tests:
+          - not_null
+      - name: event_type
+      - name: page_url
+      - name: order_id
+      - name: product_id
+        tests:
+          - not_null
+      - name: name
+      - name: price
+      - name: inventory

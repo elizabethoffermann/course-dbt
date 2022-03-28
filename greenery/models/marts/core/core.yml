@@ -1,0 +1,55 @@
+version: 2
+
+models:
+  - name: dim_users
+    columns:
+      - name: user_id
+        tests:
+          - not_null
+          - unique
+      - name: first_name
+        tests:
+          - not_null
+      - name: last_name
+        tests:
+          - not_null
+      - name: email
+      - name: phone_number
+      - name: address_id
+        tests:
+          - not_null
+      - name: address
+      - name: zipcode
+      - name: state
+      - name: country
+
+
+  - name: fact_orders
+    columns:
+      - name: order_id
+        tests:
+          - not_null
+      - name: user_id
+        tests:
+          - not_null
+      - name: promo_id
+      - name: address_id
+      - name: created_at
+      - name: order_cost
+      - name: shipping_cost
+      - name: order_total
+      - name: estimated_delivery_at
+      - name: delivered_at
+      - name: status
+      - name: first_name
+        tests:
+          - not_null
+      - name: last_name
+        tests:
+          - not_null
+      - name: email
+      - name: phone_number
+      - name: address
+      - name: zipcode
+      - name: state
+      - name: country

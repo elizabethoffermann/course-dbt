@@ -1,0 +1,19 @@
+version: 2
+
+macros:
+  - name: sessions_per_event
+    description: >
+      This is a macro to show the count of unique sessions for one event.
+    docs:
+      show: true
+    arguments:
+      - name: column_name
+        description: Column to aggregrate.
+      - name: event_type
+
+  - name: grant
+    description: user-entered role to grant access to models
+    docs:
+      show: true
+    arguments:
+      - name: role 

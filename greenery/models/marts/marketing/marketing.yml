@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: user_order_facts
+    columns:
+      - name: first_name
+        tests:
+          - not_null
+      - name: last_name
+        tests:
+          - not_null
+      - name: email
+      - name: phone_number
+      - name: address_id
+        tests:
+          - not_null
+      - name: address
+      - name: zipcode
+      - name: state
+      - name: country
+      - name: order_id
+      - name: order_created_date

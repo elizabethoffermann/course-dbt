@@ -10,6 +10,8 @@ SELECT
     , events.user_id
     , events.page_url
     , events.product_id
+    , events.order_id
+    , events.event_type
     , products.name
     , products.price
     , products.inventory
@@ -25,5 +27,5 @@ SELECT
 FROM {{ ref('stg_events') }} events
 INNER JOIN {{ ref('dim_users') }} users
     ON events.user_id = users.user_id
-INNER JOIN {{ ref('stg_products') }} products
+LEFT JOIN {{ ref('stg_products') }} products
     ON events.product_id = products.product_id
