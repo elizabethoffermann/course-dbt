@@ -35,7 +35,10 @@ models:
     # Config indicated by + and applies to all files under models/example/
     example:
       +materialized: view
-      post-hook: "grant select on {{ this }} to REPORTING"
-  
-on-run-end:
-  - "grant usage on schema {{ schema }} to REPORTING"
+
+# Having issues again with the hook after fixing it, too
+#post-hook: 
+  #- "grant select on {{ this }} to REPORTING"
+
+#on-run-end:
+  #- "grant usage on schema {{ schema }} to REPORTING"
